@@ -16,6 +16,15 @@
         <h3>
             {{ $subtitle }}
         </h3>
+        <nav>
+            <ul>
+                @foreach ($nav_links as $key => $nav_link)
+                    <li>
+                        <a href="{{ $nav_link }}">{{ $key }}</a>
+                    </li>
+                @endforeach
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -25,18 +34,18 @@
 
         <h5>Here's my todo list</h5>
         <ol>
-          @foreach ($todos as $todo)
-            <li>
-              
-              @if ($todo['done'])
-                &#9745;
-              @else
-                &#9746;
-              @endif
+            @foreach ($todos as $todo)
+                <li>
 
-              {{$todo['task']}}
-            </li>
-          @endforeach
+                    @if ($todo['done'])
+                        &#9745;
+                    @else
+                        &#9746;
+                    @endif
+
+                    {{ $todo['task'] }}
+                </li>
+            @endforeach
         </ol>
     </main>
 

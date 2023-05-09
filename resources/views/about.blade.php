@@ -9,19 +9,32 @@
 </head>
 
 <body>
-  <header>
-    <h1>
-      About
-    </h1>
-  </header>
+    <header>
+        <h1>
+            {{ $title }}
+        </h1>
 
-  <main>
-    <h2>Us in 100* words</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eaque autem, odio delectus animi tempore quis dolorem modi. Aspernatur dignissimos necessitatibus nemo dolores labore, neque reprehenderit porro? Beatae quis incidunt quibusdam? Fuga optio quas, obcaecati et ex, eligendi quam similique facilis minima eveniet praesentium vero ea veniam? Quis recusandae blanditiis saepe quibusdam facere tenetur, a aspernatur necessitatibus quam error excepturi cum amet tempore atque optio fugit nihil in obcaecati quaerat accusamus eos cupiditate quo! Ab aliquam cumque perspiciatis nisi fugit ex facilis architecto ipsum adipisci, odit beatae sed illo praesentium temporibus. Inventore et quis tempora aliquid. Nulla soluta necessitatibus beatae.
-    </p>
-    <small>(*we counted them for you)</small>
-  </main>
+        <nav>
+            <ul>
+                @foreach ($nav_links as $key => $nav_link)
+                    <li>
+                        <a href="{{ $nav_link }}">{{ $key }}</a>
+                    </li>
+                @endforeach
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+            <h2> {{ $section_title }} </h2>
+            <p> {{ $text }} </p>
+            <small> {{ $caption }} </small>
+        </section>
+
+    </main>
 
 </body>
 
