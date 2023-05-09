@@ -40,7 +40,7 @@ Route::get('/', function () {
                 'done' => true,
             ],[
                 'task' => 'Creare più pagine',
-                'done' => false,
+                'done' => true,
             ],[
                 'task' => 'Creare una navbar con i link alle pagine usando la funzione route()',
                 'done' => false,
