@@ -14,6 +14,12 @@
     <h3>Primi passi</h3>
   </header>
 
+  <main>
+    <h2>
+      {{ 'Hello World!' }}
+    </h2>
+  </main>
+
 </body>
 
 </html>
