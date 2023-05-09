@@ -14,5 +14,39 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $data = [
+        'title' => 'Laravel',
+        'subtitle' => 'First Steps',
+        'message' => 'Make yourself at "home"',
+        'todos' => [
+            [
+                'task' => 'Creare un progetto Laravel',
+                'done' => true,
+            ],[
+                'task' => 'Cancellare il file "welcome"',
+                'done' => true,
+            ],[
+                'task' => 'Creare un file "home"',
+                'done' => true,
+            ],[
+                'task' => 'Cambiare la Route verso il file "home"',
+                'done' => true,
+            ],[
+                'task' => 'Stampare "Hello World!"',
+                'done' => true,
+            ],[
+                'task' => 'Passare dei dati in view per scriverli dinamicamente in "home"',
+                'done' => true,
+            ],[
+                'task' => 'Creare più pagine',
+                'done' => false,
+            ],[
+                'task' => 'Creare una navbar con i link alle pagine usando la funzione route()',
+                'done' => false,
+            ],
+        ]
+    ];
+
+    return view('home',$data);
 })->name('home');
